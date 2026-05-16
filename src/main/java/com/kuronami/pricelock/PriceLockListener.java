@@ -42,8 +42,9 @@ public class PriceLockListener {
     @SubscribeEvent
     public void onInteract(PlayerInteractEvent.EntityInteract event) {
         if (!PriceLockConfig.FREEZE_PRICES.get()
-                || event.getLevel().isClientSide()) {
-            return;
+                || event.getLevel().isClientSide()
+                || event.getHand() != net.minecraft.world.InteractionHand.MAIN_HAND) {
+            return; // main-hand only: avoid the redundant off-hand re-trigger
         }
         if (event.getTarget() instanceof AbstractVillager villager) {
             reset(villager);
