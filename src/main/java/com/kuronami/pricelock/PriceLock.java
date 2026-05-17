@@ -23,7 +23,9 @@ public class PriceLock {
 
     public PriceLock(IEventBus modBus, ModContainer container) {
         container.registerConfig(ModConfig.Type.SERVER, PriceLockConfig.SPEC);
-        LOGGER.info("Price Lock ready — villager price markups will be cleared on trade.");
+        LOGGER.info("Price Lock ready — ON by default: villager demand price "
+            + "markups are cleared on trade & on opening a villager. "
+            + "Set freezePrices=false in serverconfig/pricelock-server.toml to disable.");
         NeoForge.EVENT_BUS.register(new PriceLockListener());
     }
 }
