@@ -1,0 +1,32 @@
+# Price Lock - Forge 1.21.1 mods.toml
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="${mod_authors}"
+displayURL="https://github.com/KURONAMI333/price-lock"
+issueTrackerURL="https://github.com/KURONAMI333/price-lock/issues"
+description='''
+${mod_description}
+'''
+
+# No [[mixins]]: Price Lock only listens to vanilla trade / interact events
+# and clears the demand-based price markup. One server-config boolean.
+
+[[dependencies.${mod_id}]]
+    modId="forge"
+    type="required"
+    versionRange="${forge_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
