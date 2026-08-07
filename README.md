@@ -31,6 +31,6 @@ v0.1 clears the markup on trade and on GUI-open (zero mixin, certain to work). A
 
 ## License
 
-MIT — modpack inclusion welcome, no credit required.
+All Rights Reserved — modpack inclusion welcome, no credit required. Source is published so you can read exactly what it does.
 
 Author: KURONAMI
